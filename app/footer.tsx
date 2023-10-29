@@ -13,9 +13,9 @@ const Footer = () => {
         <div className='grid grid-cols-3 mx-24 my-10'>
             <div className='grid grid-rows gap-1'>
                 <h1 className='text-2xl font-bold mb-3'>Links</h1>
-                <Link href="/services/education" className='hover:underline'>Education Planning</Link>
-                <Link href="/services/retirement" className='hover:underline'>Retirement Planning</Link>
-                <Link href="/services/investment" className='hover:underline'>Long-term Investment</Link>
+                <Link href="/services#education" className='hover:underline'>Education Planning</Link>
+                <Link href="/services#retirement" className='hover:underline'>Retirement Planning</Link>
+                <Link href="/services#investment" className='hover:underline'>Long-term Investment</Link>
             </div>
             <div className='grid grid-rows gap-1'>
             <h1 className='text-2xl font-bold mb-3'>Contacts</h1>

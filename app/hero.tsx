@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { BsArrowRight } from "react-icons/bs";
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
           <h1 className='text-5xl lg:text-6xl font-black mb-8 text-white'>Financial Advisor for Your Success</h1>
           <p className='font-normal mb-12 text-white'>Your Trusted Partner for Wealth Management and Financial Planning.</p>
           <Button className='text-white bg-[#00164E] rounded'>
-            <span className='mr-2'>Get Started</span> <BsArrowRight />
+            <Link href="/contact" className='mr-2'>Get Started</Link> <BsArrowRight />
           </Button>
           </div>
 
