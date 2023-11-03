@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className='bg-[#F6F6F6]'>
         <Hero />
-        <div className='px-20 p-16 '>
+        <div className='md:px-20 p-10 md:p-16 '>
         <Education />
         <Retirement />
         <Investment />

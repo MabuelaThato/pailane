@@ -4,9 +4,9 @@ import React from 'react'
 const About = () => {
   return (
     <div className='w-full bg-[#F6F6F6]'>
-        <div className='px-28 pt-20'>
+        <div className='px-14 md:px-28 pt-20'>
         <div className=' '>
-          <h1 className='text-4xl font-black mb-10'>Value Proposition</h1>
+          <h1 className='text-2xl md:text-4xl font-black mb-10'>Value Proposition</h1>
           <p className='mb-8 text-left font-medium'>
                 I am Tumelo Pailane, a dedicated Financial Planner from Liberty Life. My expertise lies in crafting
                 tailored financial strategies focusing primarily on Education Planning, Retirement Planning and long-

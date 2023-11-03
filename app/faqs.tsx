@@ -11,13 +11,15 @@ import { Badge } from '@/components/ui/badge'
 const FAQS = () => {
   return (
     <div className='p-10 text-center bg-[#F6F6F6] w-full'>
-         <h1 className='text-4xl font-black text-center p-4'>Frequently Asked Questions</h1>
-         <p className='p-4 px-12 font-medium'>Have questions? We've got answers to some of the most frequently asked questions.
-         <br />
-         Also, feel free to reach out to us via email or phone,
-             and we'll gladly offer you the information you need.</p>
+         <h1 className='text-xl md:text-4xl font-black text-center p-2 md:p-4'>Frequently Asked Questions</h1>
+         <p className='p-4 px-2 md:px-12 font-medium'>
+            Have questions? We've got answers to some of the most frequently asked questions.
+            <br />
+            Also, feel free to reach out to us via email or phone,
+            and we'll gladly offer you the information you need.
+        </p>
 
-        <div className='p-8 px-32 '>
+        <div className='p-4 md:p-8 px-2 md:px-12 lg:px-32 '>
         <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
                 <AccordionTrigger className='text-xl hover:no-underline'>

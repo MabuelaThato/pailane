@@ -42,8 +42,8 @@ const ContactForm = () => {
       }
 
   return (
-    <div className='px-8'>
-        <h2 className='text-4xl font-bold mb-4'>Send us a message</h2>
+    <div className='px-4 md:px-8 mt-6 md:mt-0'>
+        <h2 className='text-2xl md:text-4xl font-bold mb-4'>Send us a message</h2>
         <p className='mb-10'>If you have any quiries, 
         feel free to reach out by sending us an email using the form provided below.
         </p>

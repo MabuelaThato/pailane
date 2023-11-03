@@ -66,8 +66,8 @@ const Bookings = () => {
       const [date, setDate] = React.useState<Date>()
 
   return (
-    <div className='px-8'>
-        <h2 className='text-4xl font-bold mb-4'>Schedule a call</h2>
+    <div className='px-4 md:px-8 pt-10 md:pt-0 mb-6 md:mb-0'>
+        <h2 className='text-2xl md:text-4xl font-bold mb-4'>Schedule a call</h2>
         <p className='mb-10'>
         Arrange a meeting that suits your schedule. Share your preferred meeting time, and we'll make it happen.
         </p>
@@ -102,7 +102,7 @@ const Bookings = () => {
      
     <div className=''>
         <p className='text-sm font-medium mb-3'>Select a time and date</p>
-        <div className='grid grid-cols-2'>
+        <div className='lg:grid lg:grid-cols-2 lg:space-x-2'>
        <FormField
           control={form.control}
           name="time"
@@ -110,8 +110,8 @@ const Bookings = () => {
             <FormItem>
               <FormControl>
                 <Select>
-                    <SelectTrigger className="w-[180px]">
-                        <SelectValue placeholder="Theme" />
+                    <SelectTrigger className="w-[230px] md:w-[250px] lg:w-[150px] mb-4 lg:mb-0">
+                        <SelectValue placeholder="Time" />
                     </SelectTrigger>
                     <SelectContent>
                         <SelectItem value="12am" >12:00</SelectItem>
@@ -130,12 +130,13 @@ const Bookings = () => {
           )}
         />
 
+      
         <Popover>
             <PopoverTrigger asChild>
                 <Button
                 variant={"outline"}
                 className={cn(
-                    "w-[280px] justify-start text-left font-normal",
+                    "w-[230px] md:w-[250px] lg:w-[150px] justify-start text-left font-normal",
                     !date && "text-muted-foreground"
                 )}
                 >
@@ -152,6 +153,7 @@ const Bookings = () => {
                 />
             </PopoverContent>
             </Popover>
+        
             </div>
             </div>
       

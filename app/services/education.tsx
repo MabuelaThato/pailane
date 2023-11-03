@@ -3,8 +3,8 @@ import React from 'react'
 
 const Education = () => {
   return (
-    <div className='w-full mb-10'>
-        <h1 className=' text-4xl font-black mb-6'>
+    <div className='w-full mb-10' id='education'>
+        <h1 className='text-2xl md:text-4xl font-black mb-6'>
             Education Planning  
         </h1>
         <p >
@@ -14,11 +14,11 @@ const Education = () => {
             Education Planning involves two aspects: <span className='font-bold'>Investments</span> and <span className='font-bold'>Insurance</span>. 
         </p>
         <div className='pt-10'>
-            <Badge className='text-xl p-1 px-3'>
+            <Badge className='text-lg md:text-xl p-1 px-3'>
                 Investments
             </Badge>
-            <span className='flex space-x-8 py-6'>
-                <img src="/investment2.png" className='w-[90px]'/>
+            <span className='md:flex md:space-x-8 md:py-6'>
+                <img src="/investment2.png" className='w-[100px] lg:w-[90px] mx-auto md:mx-0 my-6'/>
                 <p>
                 This entails investing your money for the purpose of saving for educational expenses, 
                 from early development stage to tertiary education. 
@@ -28,12 +28,12 @@ const Education = () => {
                 </p>
             </span>
         </div>
-        <div className='pt-4'>
-            <Badge className='text-xl p-1 px-3'>
+        <div className='pt-10'>
+            <Badge className='text-lg md:text-xl p-1 px-3'>
             Insurance
             </Badge>
-            <span className='flex space-x-8 py-6'>
-                <img src="/education2.png" className='w-[90px]' />
+            <span className='md:flex md:space-x-8 md:py-6'>
+                <img src="/education2.png" className='w-[100px] lg:w-[90px] mx-auto md:mx-0 my-6' />
                 <p>
                 While providing for and investing for your child’s education, 
                 unforeseen circumstancess associated with death, disability or critical illness could arise.
