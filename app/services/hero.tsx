@@ -8,9 +8,9 @@ const Hero = () => {
             Services
         </h1>
         <p>
-         We specialise in 3 types of financial planning which are Education Planning, Investment Strategy, and Long-Term Investments.
+         I specialise in 3 types of financial planning which are Education Planning, Investment Strategy, and Long-Term Investments.
          <br />
-         Explore our services and embark on your financial journey today.
+         Explore my services and embark on your financial journey today.
         </p>
         </div>
     </div>

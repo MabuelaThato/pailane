@@ -8,7 +8,7 @@ const Education = () => {
             Education Planning  
         </h1>
         <p >
-            Education is the cornerstone of your child’s future. We work with you as a parent, plan for and secure that future rather than leaving it to chance. 
+            Education is the cornerstone of your child’s future. I work with you as a parent, plan for and secure that future rather than leaving it to chance. 
             <br />
             <br />
             Education Planning involves two aspects: <span className='font-bold'>Investments</span> and <span className='font-bold'>Insurance</span>. 
@@ -22,7 +22,7 @@ const Education = () => {
                 <p>
                 This entails investing your money for the purpose of saving for educational expenses, 
                 from early development stage to tertiary education. 
-                We help you set up a tailored investment plan based on your lifestyle, 
+                I help you set up a tailored investment plan based on your lifestyle, 
                 circumstances, school preference for your child, time horizon and budget constraints, 
                 in order to serve the financial requirements of your child’s education.  
                 </p>

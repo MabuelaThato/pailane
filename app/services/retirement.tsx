@@ -20,15 +20,15 @@ const Retirement = () => {
             </p>
             <br />
             <p>
-                 We will work with you create a retirement plan that aligns with your lifestyle and 
+                 I will work with you create a retirement plan that aligns with your lifestyle and 
                  financial goals, ensuring a secure and stress-free retirement.
             </p>
             <br />
             <p>
-                Our approach to retirement planning is comprehensive. 
+                My approach to retirement planning is comprehensive. 
                 Whether you are planning towards your retirement, are at retirement, 
                 post-retirement or navigating the complexities of transferring retirement funds, 
-                we are here for you.
+                I am here for you.
             </p>
         </div>
     </div>

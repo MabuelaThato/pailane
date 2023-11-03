@@ -42,10 +42,10 @@ const ContactForm = () => {
       }
 
   return (
-    <div className='px-4 md:px-8 mt-6 md:mt-0'>
+    <div className='px-4 md:px-6 mt-6 md:mt-0'>
         <h2 className='text-2xl md:text-4xl font-bold mb-4'>Send us a message</h2>
         <p className='mb-10'>If you have any quiries, 
-        feel free to reach out by sending us an email using the form provided below.
+        feel free to reach out by sending me an email using the form provided below.
         </p>
          <Form {...form} >
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

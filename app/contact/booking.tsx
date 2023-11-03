@@ -69,7 +69,7 @@ const Bookings = () => {
     <div className='px-4 md:px-8 pt-10 md:pt-0 mb-6 md:mb-0'>
         <h2 className='text-2xl md:text-4xl font-bold mb-4'>Schedule a call</h2>
         <p className='mb-10'>
-        Arrange a meeting that suits your schedule. Share your preferred meeting time, and we'll make it happen.
+        Arrange a meeting that suits your schedule. Share your preferred meeting time, and I'll make it happen.
         </p>
          <Form {...form} >
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

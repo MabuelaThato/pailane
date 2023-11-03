@@ -21,8 +21,8 @@ const Services = () => {
         <div className='bg-white m-4 md:m-12 lg:m-24 rounded-xl text-center p-3 md:p-10 lg:p-20 py-14 drop-shadow-2xl'>
             <h1 className='text-2xl md:text-4xl font-black mb-6'>Services</h1>
             <p className='mb-8 font-medium'>
-            We provide clear insights and expert advice to boost your success.
-            We're dedicated to helping you achieve your best, offering a full spectrum of services including:
+            I provide clear insights and expert advice to boost your success.
+            I am dedicated to helping you achieve your best, offering a full spectrum of services including:
             </p>
 
             <div className='md:grid md:grid-cols-3 md:gap-6'>

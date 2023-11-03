@@ -10,7 +10,7 @@ const Investment = () => {
         If your financial ambitions involve growing your capital to create lasting wealth, then look no further. 
         </p>
         <p className='font-bold'>
-        We specialize in curating investment portfolios that carefully consider the following factors:
+        I specialize in curating investment portfolios that carefully consider the following factors:
         </p>
         <div className='grid grid-cols-2 md:grid-cols-4 space-x-2 md:space-y-0 text-center my-12 mx-2 lg:mx-24'>
             <div className='mb-6 md:mb-0'>
