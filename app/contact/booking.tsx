@@ -4,6 +4,7 @@ import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
+import { redirect, useRouter } from "next/navigation"
 import {
   Form,
   FormControl,
@@ -32,6 +33,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { Label } from '@/components/ui/label'
+import { useToast } from '@/components/ui/use-toast'
  
 const formSchema = z.object({
     fullName: z.string().min(3, {
@@ -60,7 +62,9 @@ const Bookings = () => {
         },
       })
 
+      const toast = useToast()
       const [date, setDate] = React.useState<Date>()
+      const router = useRouter();
 
      async function onSubmit(values: z.infer<typeof formSchema>) {
         const data = {
@@ -80,6 +84,7 @@ const Bookings = () => {
     try {
         const res = await axios.post('https://api.emailjs.com/api/v1.0/email/send',data)
         console.log(res.data)
+        router.push("/")
       } catch (error) {
         console.error(error)
       }
@@ -138,7 +143,7 @@ const Bookings = () => {
      
     <div className=''>
         <p className='text-sm font-medium mb-3'>Select a time and date</p>
-        <div className='lg:grid lg:grid-cols-2 lg:space-x-2'>
+        <div className=''>
         <FormField
           control={form.control}
           name="time"
@@ -158,7 +163,7 @@ const Bookings = () => {
                 <Button
                 variant={"outline"}
                 className={cn(
-                    "w-[230px] md:w-[250px] lg:w-[200px] justify-start text-left font-normal mt-4 lg:mt-0",
+                    "w-[230px] md:w-[250px] lg:w-full justify-start text-left font-normal my-4 ",
                     !date && "text-muted-foreground"
                 )}
                 >

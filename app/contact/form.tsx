@@ -4,6 +4,7 @@ import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
+import { redirect } from "next/navigation"
 import {
   Form,
   FormControl,
@@ -15,7 +16,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import axios from "axios"
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
  
 const formSchema = z.object({
     fullName: z.string().min(2, {
@@ -37,7 +38,7 @@ const ContactForm = () => {
           message: "",
         },
       })
-
+      const router = useRouter()
       async function onSubmit(values: z.infer<typeof formSchema>) {
 
         const data = {
@@ -54,6 +55,7 @@ const ContactForm = () => {
       try {
         const res = await axios.post('https://api.emailjs.com/api/v1.0/email/send',data)
         console.log(res.data)
+        router.push("/")
       } catch (error) {
         console.error(error)
       }
