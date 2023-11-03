@@ -37,9 +37,9 @@ const Footer = () => {
             <div className='grid grid-rows'>
             <h1 className='text-2xl font-bold mb-2 text-center'>Social Media</h1>
                 <div className='flex space-x-6 md:space-x-1 lg:space-x-6 text-center place-content-center'>
-                <a href=""><FaSquareFacebook size="50px"/></a>
+                <a href="https://m.facebook.com/profile.php?id=100038808109920"><FaSquareFacebook size="50px"/></a>
                 <a href=""><FaSquareXTwitter size="50px"/></a>
-                <a href=""><FaLinkedin  size="50px"/></a>
+                <a href="https://www.linkedin.com/in/tumelo-pailane-aa443922a/?originalSubdomain=za"><FaLinkedin  size="50px"/></a>
             </div>
                 </div>
         </div>

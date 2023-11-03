@@ -14,6 +14,8 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import axios from "axios"
+import { useRouter } from 'next/router'
  
 const formSchema = z.object({
     fullName: z.string().min(2, {
@@ -26,6 +28,7 @@ const formSchema = z.object({
   })
 
 const ContactForm = () => {
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -35,10 +38,26 @@ const ContactForm = () => {
         },
       })
 
-      function onSubmit(values: z.infer<typeof formSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
+      async function onSubmit(values: z.infer<typeof formSchema>) {
+
+        const data = {
+          service_id: 'service_vi8loqv',
+          template_id: 'template_4txznrf',
+          user_id: 'RSDwXqQkjUZrYQIvd',
+          template_params: {
+              from_name: values.fullName,
+              from_email: values.email,
+              message: values.message
+          }
+      };
+
+      try {
+        const res = await axios.post('https://api.emailjs.com/api/v1.0/email/send',data)
+        console.log(res.data)
+      } catch (error) {
+        console.error(error)
+      }
+
       }
 
   return (

@@ -23,7 +23,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
- 
+ import axios from 'axios'
 import { cn } from "@/lib/utils"
 import { Calendar } from "@/components/ui/calendar"
 import {
@@ -35,35 +35,57 @@ import { Label } from '@/components/ui/label'
  
 const formSchema = z.object({
     fullName: z.string().min(3, {
-        message: "Please enter your email.",
+        message: "Please enter your full name.",
       }),
     cell: z.string().min(10, {
       message: "Please enter your cellphone number",
     }),
-    time: z.string().min(3, {
-        message: "Please enter your email.",
-      }),
-    message: z.string().min(0).max(150),
+    email: z.string().min(10, {
+      message: "Please enter your email",
+    }),
+    time: z.string().min(0),
+    method: z.string().min(0),
   })
 
 const Bookings = () => {
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
             fullName: "",
             cell: "",
+            email: "",
             time: "",
-            message: "",
+            method: "",
         },
       })
 
-      function onSubmit(values: z.infer<typeof formSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
+      const [date, setDate] = React.useState<Date>()
+
+     async function onSubmit(values: z.infer<typeof formSchema>) {
+        const data = {
+          service_id: 'service_vi8loqv',
+          template_id: 'template_6o4uztm',
+          user_id: 'RSDwXqQkjUZrYQIvd',
+          template_params: {
+              from_name: values.fullName,
+              contact_number: values.cell,
+              from_email: values.email,
+              time: values.time,
+              date: date,
+              method: values.method
+          }
+      };
+      
+    try {
+        const res = await axios.post('https://api.emailjs.com/api/v1.0/email/send',data)
+        console.log(res.data)
+      } catch (error) {
+        console.error(error)
       }
 
-      const [date, setDate] = React.useState<Date>()
+      }
+   
 
   return (
     <div className='px-4 md:px-8 pt-10 md:pt-0 mb-6 md:mb-0'>
@@ -99,36 +121,36 @@ const Bookings = () => {
             </FormItem>
           )}
         />
-     
-    <div className=''>
-        <p className='text-sm font-medium mb-3'>Select a time and date</p>
-        <div className='lg:grid lg:grid-cols-2 lg:space-x-2'>
-       <FormField
+
+        <FormField
           control={form.control}
-          name="time"
-          render={() => (
+          name="email"
+          render={({ field }) => (
             <FormItem>
+              <FormLabel>Email Address</FormLabel>
               <FormControl>
-                <Select>
-                    <SelectTrigger className="w-[230px] md:w-[250px] lg:w-[150px] mb-4 lg:mb-0">
-                        <SelectValue placeholder="Time" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="12am" >12:00</SelectItem>
-                        <SelectItem value="1pm">13:00</SelectItem>
-                        <SelectItem value="2pm">14:00</SelectItem>
-                        <SelectItem value="3pm">15:00</SelectItem>
-                        <SelectItem value="4pm">16:00</SelectItem>
-                        <SelectItem value="5pm">17:00</SelectItem>
-                        <SelectItem value="6pm">18:00</SelectItem>
-                        <SelectItem value="7pm">19:00</SelectItem>
-                    </SelectContent>
-                </Select>
+                <Input placeholder="john@doe.com" {...field} className=''/>
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-        />
+        />  
+     
+    <div className=''>
+        <p className='text-sm font-medium mb-3'>Select a time and date</p>
+        <div className='lg:grid lg:grid-cols-2 lg:space-x-2'>
+        <FormField
+          control={form.control}
+          name="time"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input placeholder="Choose a time between 10am-5pm " {...field} className=''/>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />  
 
       
         <Popover>
@@ -136,7 +158,7 @@ const Bookings = () => {
                 <Button
                 variant={"outline"}
                 className={cn(
-                    "w-[230px] md:w-[250px] lg:w-[150px] justify-start text-left font-normal",
+                    "w-[230px] md:w-[250px] lg:w-[200px] justify-start text-left font-normal mt-4 lg:mt-0",
                     !date && "text-muted-foreground"
                 )}
                 >
@@ -155,6 +177,20 @@ const Bookings = () => {
             </Popover>
         
             </div>
+    
+            <FormField
+          control={form.control}
+          name="method"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Preferred method of communication</FormLabel>
+              <FormControl>
+                <Input placeholder="Call, Zoom, Teams.." {...field} className=''/>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />  
             </div>
       
 
