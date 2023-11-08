@@ -2,7 +2,7 @@ import React from 'react'
 
 const Investment = () => {
   return (
-    <div className='my-10' id='investment'>
+    <div className='mt-12 mb-6' id='investment'>
         <h1 className='text-2xl md:text-4xl mb-6 font-black'>
         Long-Term Investment for Capital Growth
         </h1>

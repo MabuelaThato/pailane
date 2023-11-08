@@ -3,7 +3,7 @@ import React from 'react'
 
 const Retirement = () => {
   return (
-    <div className='my-12' id='retirement'>
+    <div className='mb-12' id='retirement'>
     <h2 className='text-2xl md:text-4xl md:mb-4 font-black'>
         Retirement Planning
     </h2>

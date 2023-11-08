@@ -10,7 +10,6 @@ const Education = () => {
         <p >
             Education is the cornerstone of your child’s future. I work with you as a parent, plan for and secure that future rather than leaving it to chance. 
             <br />
-            <br />
             Education Planning involves two aspects: <span className='font-bold'>Investments</span> and <span className='font-bold'>Insurance</span>. 
         </p>
         <div className='pt-10'>
@@ -28,7 +27,7 @@ const Education = () => {
                 </p>
             </span>
         </div>
-        <div className='pt-10'>
+        <div className='pt-1'>
             <Badge className='text-lg md:text-xl p-1 px-3'>
             Insurance
             </Badge>

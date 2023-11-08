@@ -8,7 +8,7 @@ const Hero = () => {
             Services
         </h1>
         <p>
-         I specialise in 3 types of financial planning which are Education Planning, Investment Strategy, and Long-Term Investments.
+         I specialise in 3 types of financial planning which are Education Planning, Retirement Planning, and Long-Term Investments.
          <br />
          Explore my services and embark on your financial journey today.
         </p>
