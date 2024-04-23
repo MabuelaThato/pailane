@@ -8,7 +8,7 @@ const Hero = () => {
             Get in touch.
         </h1>
         <p>
-        You can contact me via phone at 012 433 7278, email at tumelo.pailane@liblink.co.za, or via Whatsapp at 071 487 5168.
+        You can contact me via Whatsapp at 071 487 5168.
         </p>
         </div>
     </div>

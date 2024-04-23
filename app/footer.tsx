@@ -19,20 +19,12 @@ const Footer = () => {
             </div>
             <div className='grid grid-rows gap-1 mb-6 md:mb-0 place-content-center md:place-content-start'>
             <h1 className='text-2xl font-bold mb-3 md:text-left'>Contacts</h1>
-                <div className='flex '>
-                <FaPhone /> 
-                <span className='ml-4'>012 433 7278</span>
-                </div>
                 
                 <div className='flex'>
                 <FaWhatsapp /> 
                 <span className='ml-4'>071 487 5168</span>
                 </div>
                 
-                <div className='flex text-white'>
-                <FiMail /> 
-                <a href='mailto:tumelo.pailane@liblink.co.za' className='ml-4'>tumelo.pailane@liblink.co.za</a >
-                </div>
             </div>
             <div className='grid grid-rows'>
             <h1 className='text-2xl font-bold mb-2 text-center'>Social Media</h1>
